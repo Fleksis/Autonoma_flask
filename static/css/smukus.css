@@ -1,0 +1,54 @@
+body {
+    background-image: url("/static/img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LOGO {
+    width: 400px;
+    height: 250px;
+}
+
+.nomātAuto {
+    width: 348px;
+    height: 60px;
+    background: #C4C4C4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 58px;
+}
+
+.nomasPoga {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.nomasText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.adminPos {
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 1780px;
+}
+
+.adminPoga {
+    width: 124px;
+    height: 32px;
+    font-size: 20px;
+    background: #CCCCCC;
+}
