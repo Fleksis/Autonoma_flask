@@ -14,20 +14,38 @@ body {
     height: 250px;
 }
 
-.nomātAuto {
+.nomasPoga {
+    border: 3px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.nomatAuto {
     width: 348px;
     height: 60px;
     background: #C4C4C4;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     line-height: 58px;
+    text-align: center;
+}
+.nomatAuto:visited {
+    color: black;
+    text-decoration: none;
 }
 
-.nomasPoga {
+.nomatAuto:link {
+    text-decoration: none;
+    color: black;
+}
+
+.div {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
 }
 
 .nomasText {
@@ -43,7 +61,7 @@ body {
 .adminPos {
     position: absolute;
     margin-top: -250px;
-    margin-left: 1780px;
+    margin-left: 1850px;
 }
 
 .adminPoga {
@@ -51,4 +69,14 @@ body {
     height: 32px;
     font-size: 20px;
     background: #CCCCCC;
+}
+
+.adminPoga:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.adminPoga:link {
+    text-decoration: none;
+    color: black;
 }

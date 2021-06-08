@@ -11,4 +11,8 @@ def home():
 def admin():
   return render_template("adminlappa.html")
 
+@app.route('/izvele')
+def izvele():
+  return render_template("Klienta_lapa_izvl.html")
+
 app.run(host='0.0.0.0', port=8080)

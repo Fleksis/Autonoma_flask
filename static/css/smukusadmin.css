@@ -1,5 +1,5 @@
 body {
-    background-image: url("/static/img/admin_backg2.png");
+    background-image: url("background.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -14,47 +14,24 @@ body {
     height: 250px;
 }
 
-.nomātAuto {
-    width: 348px;
-    height: 60px;
-    background: #C4C4C4;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    line-height: 58px;
+.backPos {
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 1860px;
 }
 
-.nomasPoga {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25px;
-}
+.back {
 
-.nomasText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-}
-
-.test {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin-top: -100px;
-}
-
-.adminPoga {
-    width: 124px;
-    height: 32px;
+    font-size: 20px;
     background: #CCCCCC;
 }
 
-.backbutton {
-    width: 124px;
-    height: 32px;
-    background: #CCCCCC;   
+.back:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.back:link {
+    text-decoration: none;
+    color: black;
 }
