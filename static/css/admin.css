@@ -1,0 +1,25 @@
+.adminPos {
+    position: absolute;
+    margin-left: 1800px;
+}
+
+
+.adminPoga {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    font-size: 20px;
+    font-family: sans-serif;
+    background: #CCCCCC;
+}
+
+.adminPoga:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.adminPoga:link {
+    text-decoration: none;
+    color: black;
+}

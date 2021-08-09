@@ -1,0 +1,43 @@
+.adminPos {
+    position: absolute;
+    margin-left: 1800px;
+}
+
+
+.adminPoga {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    font-size: 20px;
+    font-family: sans-serif;
+    background: #CCCCCC;
+}
+
+.adminPoga:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.adminPoga:link {
+    text-decoration: none;
+    color: black;
+}
+
+#biblioteka {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.jaunsLogs {
+    background-image: url("/img/fons.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+}

@@ -1,12 +1,6 @@
-body {
-    background-image: url("/static/img/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .logo2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: absolute ;
+    margin-left: 770px;
 }
 
 .LOGO {
@@ -15,8 +9,6 @@ body {
 }
 
 .nomasPoga {
-    border: 3px solid black;
-    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,14 +16,24 @@ body {
 }
 
 .nomatAuto {
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 5px;
     width: 348px;
     height: 60px;
-    background: #C4C4C4;
+    background: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     line-height: 58px;
     text-align: center;
 }
+
+.nomatAuto:active {
+    color: purple;
+    background: black;
+    border: 3px solid whitesmoke;
+}
+
 .nomatAuto:visited {
     color: black;
     text-decoration: none;
@@ -42,12 +44,6 @@ body {
     color: black;
 }
 
-.div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .nomasText {
     display: flex;
     justify-content: center;
@@ -55,19 +51,23 @@ body {
     margin-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-    color: rgb(255, 255, 255);
+    color: rgb(177, 177, 177);
 }
 
 .adminPos {
     position: absolute;
     margin-top: -250px;
-    margin-left: 1850px;
+    margin-left: 1800px;
 }
 
+
 .adminPoga {
-    width: 124px;
-    height: 32px;
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    height: 25px;
     font-size: 20px;
+    font-family: sans-serif;
     background: #CCCCCC;
 }
 
@@ -80,3 +80,160 @@ body {
     text-decoration: none;
     color: black;
 }
+
+#poga {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jaunaNoma {
+    background-color: whitesmoke;
+    font-size: 25px;
+    font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
+    color: black;
+    font-weight: 700;
+    border: solid 4px grey;
+    width: 281px;
+    height: 50px;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+h3 {
+    font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
+    color: purple;
+    margin-top: -10px;
+    margin-left: 20px;
+}
+
+#vards {
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#uzvards {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#dzivesVieta {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#numurs {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#budzets {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#marka {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#datums {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#PrecesPoga {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: purple;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 25px;
+    background: whitesmoke;
+    width: 200px;
+    border-radius: 15px;
+    margin-left: 25px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#PrecesPoga:active {
+    color:purple;
+    background: black;
+    border: 3px solid whitesmoke;
+}
+
+#lodzinjs {
+    display: none;
+}
+
+#form {
+    background-image: url("/img/lodzinjaFons.png");
+    background-size: cover;
+    padding: 20px;
+    border: 3px solid purple;
+    border-radius: 15px;
+    width: 240px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+#biblioteka {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.jaunsLogs {
+    background-image: url("/img/fons.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+}
+
+h4 {
+    color: purple;
+    overflow-wrap: break-word;
+}
+
+
+//asd

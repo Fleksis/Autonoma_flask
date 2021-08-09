@@ -2,23 +2,51 @@
 <html lang="lv">
 <head>
     <title>Karliku AutoNoma</title>
-    <link rel="Icon" href="/static/img/logo_mazais.png">
+    <link rel="Icon" href="../static/img/logo_mazais.png">
 </head>
 <body>
-    <link rel="stylesheet" href="/static/css/smukus.css">
-    <div class="logo2">
-        <img class="LOGO" src="/static/img/lielaisLogo.png">
-    </div>
+  <style>
+    body {
+      background-image: url("../static/img/background.png");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-color: lightgray;
+    }
+  </style>
 
-    <div class="adminPos">
-        <a href="/admin" class="adminPoga">Admin</a>
-    </div>
+<link rel="stylesheet" href="../static/css/smukus.css">
 
-    <p class="nomasText">Nomā mašīnu jau tagad!</p>
-    <div class="div">
-        <div class="nomasPoga">
-            <a class="nomatAuto" href="/izvele">Nomāt Automašīnu</a>
-        </div>
-    </div>
+<div class="logo2">
+  <img class="LOGO" src="../static/img/lielaisLogo.png">
+</div>
+
+<div class="adminPos">
+  <a href="/admin" class="adminPoga">Admin</a>
+</div>
+
+<p class="nomasText">Nomā mašīnu jau tagad!</p>
+
+<div id="poga">
+  <button id=jaunaNoma>Nomāt Automašīnu</button>
+</div>
+
+<div id="lodzinjs">
+  <form id="form">
+      <h3>Nomāt automašīnu!</h3>
+      <input type="text" id="vards" placeholder="Vārds">
+      <input type="text" id="uzvards" placeholder="Uzvārds">
+      <input type="text" id="dzivesVieta" placeholder="Dzīves vieta">
+      <input type="text" id="numurs" placeholder="Telefona numurs">
+      <input type="text" id="budzets" placeholder="Jūsu budžets">
+      <input type="text" id="marka" placeholder="Automobīļa marka">
+      <input type="text" id="datums" placeholder="No - Līdz">
+      <button type="submit" id="PrecesPoga">Pievienot</button>
+  </form>
+</div>
+
+<script src="../static/js/autoNoma.js">
+</script> 
+
 </body>
 </html>
