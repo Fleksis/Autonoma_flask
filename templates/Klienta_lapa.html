@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="lv">
+
 <head>
-    <title>Karliku AutoNoma</title>
-    <link rel="Icon" href="../static/img/logo_mazais.png">
+  <title>Karliku AutoNoma</title>
+  <link rel="Icon" href="../static/img/logo_mazais.png">
 </head>
+
 <body>
-  <style>
-    body {
-      background-image: url("../static/img/background.png");
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      background-color: lightgray;
-    }
-  </style>
 
-<link rel="stylesheet" href="../static/css/smukus.css">
+  <link rel="stylesheet" href="../static/css/smukus.css">
 
-<div class="logo2">
-  <img class="LOGO" src="../static/img/lielaisLogo.png">
-</div>
+  <div class="logo2">
+    <img class="LOGO" src="../static/img/lielaisLogo.png">
+  </div>
 
-<div class="adminPos">
-  <a href="/admin" class="adminPoga">Admin</a>
-</div>
+  <div class="adminPos">
+    <a href="/admin" class="adminPoga">Admin</a>
+  </div>
 
-<p class="nomasText">Nomā mašīnu jau tagad!</p>
+  <p class="nomasText">Nomā mašīnu jau tagad!</p>
 
-<div id="poga">
-  <button id=jaunaNoma>Nomāt Automašīnu</button>
-</div>
+  <div id="poga">
+    <button id=jaunaNoma>Nomāt Automašīnu</button>
+  </div>
 
-<div id="lodzinjs">
-  <form id="form">
-      <h3>Nomāt automašīnu!</h3>
+  <div id="lodzinjs">
+    <form id="form">
+      <h3 class="h3Krasa">Nomāt automašīnu!</h3>
+      <H4 type="text" id="id" placeholder="Id"></H4>
       <input type="text" id="vards" placeholder="Vārds">
       <input type="text" id="uzvards" placeholder="Uzvārds">
       <input type="text" id="dzivesVieta" placeholder="Dzīves vieta">
@@ -42,11 +36,20 @@
       <input type="text" id="marka" placeholder="Automobīļa marka">
       <input type="text" id="datums" placeholder="No - Līdz">
       <button type="submit" id="PrecesPoga">Pievienot</button>
-  </form>
-</div>
+    </form>
+  </div>
 
-<script src="../static/js/autoNoma.js">
-</script> 
+  <div id="pazinojum">
+
+  </div>
+
+  <div id="biblioteka">
+
+  </div>
+
+  <script src="../static/js/autoNoma.js">
+  </script>
 
 </body>
+
 </html>

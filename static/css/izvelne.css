@@ -31,7 +31,7 @@
 }
 
 .jaunsLogs {
-    background-image: url("/img/fons.png");
+    background-image: url("../img/fons.png");
     background-size: cover;
     display: flex;
     flex-direction: column;

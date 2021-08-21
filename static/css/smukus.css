@@ -1,5 +1,13 @@
+body {
+    background-image: url("../img/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: lightgray;
+  }
+
 .logo2 {
-    display: absolute ;
+    display: flex ;
     margin-left: 770px;
 }
 
@@ -51,13 +59,13 @@
     margin-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
-    color: rgb(177, 177, 177);
+    color: white;
 }
 
 .adminPos {
     position: absolute;
     margin-top: -250px;
-    margin-left: 1800px;
+    margin-left: 1780px;
 }
 
 
@@ -88,102 +96,101 @@
 }
 
 #jaunaNoma {
-    background-color: whitesmoke;
+    background-color: white;
     font-size: 25px;
     font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
     color: black;
     font-weight: 700;
-    border: solid 4px grey;
+    border: solid 4px black;
     width: 281px;
     height: 50px;
     border-radius: 1000px;
     cursor: pointer;
 }
 
-h3 {
-    font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
-    color: purple;
-    margin-top: -10px;
-    margin-left: 20px;
+#jaunaNoma:active {
+    background: whitesmoke;
+    border: 3px solid grey;
 }
 
 #vards {
-    margin-left: 35px;
+    margin-top: 0px;
+    margin-left: 30px;
     border-radius: 10px;
     font-size: 17px;
     text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
+    border: 3px solid white;
+    background-color: white;
+
 }
 
 #uzvards {
     margin-top: 15px;
-    margin-left: 35px;
+    margin-left: 30px;
     border-radius: 10px;
     font-size: 17px;
     text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
+    border: 3px solid white;
+    background-color: white;
 }
 
 #dzivesVieta {
     margin-top: 15px;
-    margin-left: 35px;
+    margin-left: 30px;
     border-radius: 10px;
     font-size: 17px;
     text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
+    border: 3px solid white;
+    background-color: white;
 }
 
 #numurs {
     margin-top: 15px;
-    margin-left: 35px;
+    margin-left: 30px;
     border-radius: 10px;
     font-size: 17px;
     text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
+    border: 3px solid white;
+    background-color: white;
 }
 
 #budzets {
     margin-top: 15px;
-    margin-left: 35px;
+    margin-left: 30px;
     border-radius: 10px;
     font-size: 17px;
     text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
+    border: 3px solid white;
+    background-color: white;
 }
 
 #marka {
     margin-top: 15px;
-    margin-left: 35px;
+    margin-left: 30px;
     border-radius: 10px;
     font-size: 17px;
     text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
+    border: 3px solid white;
+    background-color: white;
 }
 
 #datums {
     margin-top: 15px;
-    margin-left: 35px;
+    margin-left: 30px;
     border-radius: 10px;
     font-size: 17px;
     text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
+    border: 3px solid white;
+    background-color: white;
 }
 
 #PrecesPoga {
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    color: purple;
+    color: black;
     border: 3px solid black;
-    border-radius: 5px;
     font-size: 25px;
-    background: whitesmoke;
+    background: white;
     width: 200px;
     border-radius: 15px;
     margin-left: 25px;
@@ -192,24 +199,60 @@ h3 {
 }
 
 #PrecesPoga:active {
-    color:purple;
-    background: black;
-    border: 3px solid whitesmoke;
+    background: whitesmoke;
+    border: 3px solid grey;
+}
+
+#decline {
+    display: none;
+}
+
+#accept {
+    display: none;
 }
 
 #lodzinjs {
     display: none;
 }
 
+.h3Krasa {
+    font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
+    color: white;
+    margin-top: -10px;
+    margin-left: 30px;
+}
+
 #form {
-    background-image: url("/img/lodzinjaFons.png");
+    background-image: url("../img/lodzinjaFons.png");
     background-size: cover;
+    margin: auto;
     padding: 20px;
-    border: 3px solid purple;
+    border: solid 3px whitesmoke;
     border-radius: 15px;
     width: 240px;
     height: 400px;
     margin-top: 50px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.closebtn:hover {
+    color: black;
 }
 
 #biblioteka {
@@ -219,21 +262,25 @@ h3 {
 }
 
 .jaunsLogs {
-    background-image: url("/img/fons.png");
-    background-size: cover;
     display: flex;
+    background-image: url("../img/fons.jpg");
+    margin-left: 15px;
+    background-size: cover;
     flex-direction: column;
     align-items: center;
     border: 3px solid black;
     border-radius: 5px;
-    padding: 5px;
-    margin: 20px;
+}
+
+#apst {
+    display: none;
+}
+
+#neapst {
+    display: none;
 }
 
 h4 {
-    color: purple;
+    color: white;
     overflow-wrap: break-word;
 }
-
-
-//asd

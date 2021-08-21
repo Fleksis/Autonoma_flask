@@ -23,3 +23,163 @@
     text-decoration: none;
     color: black;
 }
+
+#poga {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#jaunaNoma {
+    background-color: whitesmoke;
+    font-size: 25px;
+    font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
+    color: black;
+    font-weight: 700;
+    border: solid 4px grey;
+    width: 281px;
+    height: 50px;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+h3 {
+    margin-top: -10px;
+    margin-left: 20px;
+    font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
+    color: purple;
+}
+
+#vards {
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#uzvards {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#dzivesVieta {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#numurs {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#budzets {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#marka {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#datums {
+    margin-top: 15px;
+    margin-left: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    background-color: lightgrey;
+    border: solid 1px grey;
+}
+
+#PrecesPoga {
+    margin-left: 25px;
+    margin-top: 30px;
+    color: purple;
+    border: 3px solid black;
+    font-size: 25px;
+    background: whitesmoke;
+    width: 200px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#PrecesPoga:active {
+    color:purple;
+    background: black;
+    border: 3px solid whitesmoke;
+}
+
+#lodzinjs {
+    display: none;
+}
+
+#form {
+    background-image: url("../img/lodzinjaFons.png");
+    background-size: cover;
+    margin-top: 50px;
+    margin-left: 800px;
+    padding: 20px;
+    border: 3px solid purple;
+    border-radius: 15px;
+    width: 240px;
+    height: 400px;
+}
+
+#biblioteka {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.jaunsLogs {
+    display: flex;
+    background-image: url("../img/fons.jpg");
+    background-size: cover;
+    flex-direction: column;
+    margin: 20px;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#apst {
+    display: none;
+}
+
+#neapst {
+    display: none;
+}
+
+h4 {
+    color: purple;
+    overflow-wrap: break-word;
+}
