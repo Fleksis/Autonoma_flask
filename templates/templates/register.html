@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block title %}Reģistrācija{% endblock %}
+
+{% block content %}
+<div>
+    <form id="form" method="POST" action="/new_user_register">
+        <h3 class="h3Krasa">Reģistrācijas lapa</h3>
+        <input type="text" name="firstname" placeholder="Vārds">
+        <input type="text" name="lastname" placeholder="Uzvārds">
+        <input type="email" name="email" placeholder="email">
+        <input type="text" name="password" placeholder="parole">
+        <input type="text" name="password_confirm" placeholder="atkārtojiet paroli">
+        <input type="text" name="address" placeholder="Dzīves vieta">
+        <input type="text" name="mobile_number" placeholder="+371 telefona numurs">
+        <button type="submit" id="PrecesPoga">Reģistrēties</button>
+    </form>
+</div>
+{% endblock %}

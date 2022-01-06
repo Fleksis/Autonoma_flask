@@ -31,13 +31,26 @@
 }
 
 .jaunsLogs {
-    background-image: url("../img/fons.png");
-    background-size: cover;
     display: flex;
+    background-image: url("/img/fons.png");
+    margin-top: 350px;
+    margin-left: 15px;
+    background-size: cover;
     flex-direction: column;
     align-items: center;
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 5px;
-    padding: 5px;
-    margin: 20px;
+}
+
+#apst {
+    display: none;
+}
+
+#neapst {
+    display: none;
+}
+
+h4 {
+    color: white;
+    overflow-wrap: break-word;
 }

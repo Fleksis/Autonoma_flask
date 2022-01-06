@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+
+  <title>{% block title %}Karliku AutoNoma{% endblock %}</title>
+  <link rel="Icon" href="img/logo_mazais.png">
+  <link rel="stylesheet" href="/static/css/stylesheet.css">
+</head>
+
+<body>
+
+  <img class="logo" src="/static/img/lielaisLogo.png">
+  {% block content %}
+    <div class="navigation-bar">
+      <a href="/about_us">Par Mums!</a>
+      <a href="/admin">Reģistrācija</a>
+    </div>
+
+    <p class="nomasText">Nomā mašīnu jau tagad!</p>
+
+    <div id="poga">
+      <button id=jaunaNoma>Nomāt Automašīnu</button>
+    </div>
+
+    <div id="lodzinjs">
+      <form id="form" method="POST" action="/add_car">
+        <h3 class="h3Krasa">Nomāt automašīnu!</h3>
+        <H4 type="text" id="id" placeholder="Id"></H4>
+        <input type="text" id="vards" name="name" placeholder="Vārds">
+        <input type="text" id="uzvards" name="lastname" placeholder="Uzvārds">
+        <input type="text" id="dzivesVieta" name="address" placeholder="Dzīves vieta">
+        <input type="text" id="numurs" name="mobile_number" placeholder="Telefona numurs">
+        <select name="car" id="marka">
+          <option value="Audi" disabled>**Audi**</option>
+          <option value="Audi a8">Audi A8</option>
+          <option value="Audi r8">Audi R8</option>
+          <option value="Audi q7">Audi Q7</option>
+          <option value="BMW" disabled>**BMW**</option>
+          <option value="BMW e46">BMW E46</option>
+          <option value="Bmw x5">Bmw X5</option>
+          <option value="Bmw i8">Bmw I8</option>
+          <option value="Bmw e60">Bmw E60</option>
+          <option value="Mercedes" disabled>**Mercedes**</option>
+          <option value="Mercedes amg 63">Mercedes amg 63</option>
+          <option value="Mercedes w220">Mercedes w220</option>
+          <option value="Mercedes w124">Mercedes w124</option>
+          <option value="Nissan" disabled>**Nissan**</option>
+          <option value="Nissan silvia s15">Nissan silvia s15</option>
+          <option value="Nissan skyline 34">Nissan skyline 34</option>
+          <option value="Nissan juke">nissan juke</option>
+          <option value="Opel" disabled>**Opel**</option>
+          <option value="Opel zafira">Opel zafira</option>
+          <option value="Opel astra">Opel astra</option>
+          <option value="Opel merriva">Opel merriva</option>
+          <option value="Volvo" disabled>**Volvo**</option>
+          <option value="Volvo s60">Volvo s60</option>
+          <option value="Volvo xc 90">Volvo xc 90</option>
+          <option value="Volvo v70">Volvo v70</option>
+          <option value="Toyota" disabled>**Toyota**</option>
+          <option value="Toyota corolla">Toyota corolla</option>
+          <option value="Toyota avensis">Toyota avensis</option>
+          <option value="Toyota land-cruiser">Toyota land-cruiser</option>
+          <option value="Toyota supra a80">Toyota supra a80</option>
+        </select>
+        <label for="from_date">No:</label><input id="from_date" type="date" id="no" name="from_date">
+        <br>
+        <label for="to_date">Līdz:</label><input id="to_date" type="date" id="lidz" name="to_date">
+        <button onclick="alerts()" type="submit" id="PrecesPoga">Pievienot</button>
+      </form>
+    </div>
+
+    <div id="pazinojum">
+
+    </div>
+
+    <div id="biblioteka">
+      {% for car in cars %}
+        <div class="jaunsLogs">
+          <h4> ID: {{ car.id }}</h4>
+          <h4>Vārds: {{ car.firstname }}</h4>
+          <h4>Uzvārds: {{ car.lastname }}</h4>
+          <h4>Dzīves vieta: {{ car.address }}</h4>
+          <h4>Telefona numurs: {{ car.mobile_number }}</h4>
+          <h4>Automobīļa marka: {{ car.car }}</h4>
+          <h4>Nomas datums no: {{ car.from_date }}</h4>
+          <h4>Nomas datums līdz: {{ car.to_date }}</h4>
+          <button>Aptiprināt</button>
+          <button>Neapstiprināt</button>
+          <h5>Noma apstiprināta!</h5>
+          <h5>Noma noraidīta!</h5>
+          </div>
+      {% endfor %}
+    </div>
+
+    <script src="/static/js/autoNoma.js">
+    </script>
+  {% endblock %}
+</body>
+
+</html>
