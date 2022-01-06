@@ -19,6 +19,10 @@ def izvele():
 def register():
   return render_template("templates/register.html")
 
+@app.route('/login')
+def login():
+  return render_template("templates/login.html")
+
 @app.route('/add_car', methods=["POST"])
 def add_car():
   if request.method == "POST":
