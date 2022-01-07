@@ -9,11 +9,18 @@
         <input type="text" name="firstname" placeholder="Vārds">
         <input type="text" name="lastname" placeholder="Uzvārds">
         <input type="email" name="email" placeholder="email">
-        <input type="text" name="password" placeholder="parole">
-        <input type="text" name="password_confirm" placeholder="atkārtojiet paroli">
+        <input type="password" name="password" placeholder="parole">
+        <input type="password" name="password_confirm" placeholder="atkārtojiet paroli">
         <input type="text" name="address" placeholder="Dzīves vieta">
         <input type="text" name="mobile_number" placeholder="+371 telefona numurs">
         <button type="submit" id="PrecesPoga">Reģistrēties</button>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h4 class="error">{{ message }}</h4>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
     </form>
 </div>
 {% endblock %}

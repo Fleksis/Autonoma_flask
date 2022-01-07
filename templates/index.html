@@ -16,6 +16,7 @@
   {% block content %}
     <div class="navigation-bar">
       <a href="/about_us">Par Mums!</a>
+      <a href="/login">Pieslēgties</a>
       <a href="/register">Reģistrācija</a>
     </div>
 
@@ -26,13 +27,13 @@
     </div>
 
     <div id="lodzinjs">
-      <form id="form" method="POST" action="/add_car">
+      <form class="form" id="form" method="POST" action="/add_car">
         <h3 class="h3Krasa">Nomāt automašīnu!</h3>
-        <H4 type="text" id="id" placeholder="Id"></H4>
+        <!-- <H4 type="text" id="id" placeholder="Id"></H4>
         <input type="text" id="vards" name="name" placeholder="Vārds">
         <input type="text" id="uzvards" name="lastname" placeholder="Uzvārds">
         <input type="text" id="dzivesVieta" name="address" placeholder="Dzīves vieta">
-        <input type="text" id="numurs" name="mobile_number" placeholder="Telefona numurs">
+        <input type="text" id="numurs" name="mobile_number" placeholder="Telefona numurs"> -->
         <select name="car" id="marka">
           <option value="Audi" disabled>**Audi**</option>
           <option value="Audi a8">Audi A8</option>
@@ -65,9 +66,14 @@
           <option value="Toyota land-cruiser">Toyota land-cruiser</option>
           <option value="Toyota supra a80">Toyota supra a80</option>
         </select>
-        <label for="from_date">No:</label><input id="from_date" type="date" id="no" name="from_date">
-        <br>
-        <label for="to_date">Līdz:</label><input id="to_date" type="date" id="lidz" name="to_date">
+        <div class="date-box">
+          <div>
+            <label for="from_date">No:</label><input id="from_date" type="date" id="no" name="from_date">
+          </div>
+          <div>
+            <label for="to_date">Līdz:</label><input id="to_date" type="date" id="lidz" name="to_date">
+          </div>
+        </div>
         <button onclick="alerts()" type="submit" id="PrecesPoga">Pievienot</button>
       </form>
     </div>

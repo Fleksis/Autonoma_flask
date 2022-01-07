@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, Response
+from flask import Flask, render_template, request, redirect
+from flask.helpers import url_for, flash
 from settings import app
 from models import User
 from business_logic import save_car_booking, get_car_booking, save_user_registration
@@ -33,12 +34,13 @@ def add_car():
 
 @app.route('/new_user_register', methods=['POST'])
 def new_user_register():
-  if request.method == "POST":
-    save_user_registration(request.form)
-    return "Done"
-  else:
-    return "404"
-
+  try:
+    if request.method == "POST":
+      save_user_registration(request.form)
+      return redirect(url_for('home'))
+  except Exception as e:
+    flash(str(e))
+    return redirect(url_for('register'))
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0', port=80)

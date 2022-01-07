@@ -149,8 +149,7 @@ form {
     margin-top: 50px;
 }
 
-form > input, form > select {
-    margin-top: 15px;
+form > input, form > select{
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -161,6 +160,7 @@ form > input, form > select {
     background-color: white;
     outline: none;
     width: 190px;
+    margin-bottom: 15px;
 }
 
 form > input:active, form > select:active {
@@ -168,18 +168,41 @@ form > input:active, form > select:active {
     border: 2px solid grey;
 }
 
-form > label {
-    color: white;
-    font-size: 20px;
+.form {
+    background-position: 0px;
 }
 
 option {
     background-color: whitesmoke;
 }
 
+.date-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+}
 
-#from_date {
-    margin-left: 42px;
+.date-box > div {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    align-items: center;
+    width: 190px;
+    color: white;
+    font-size: 20px;
+    height:30px;
+}
+
+.date-box > div > input {
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid white;
+    background-color: white;
+    outline: none;
 }
 
 #no {
@@ -228,6 +251,11 @@ option {
     margin-left: 25px;
     margin-top: 30px;
     cursor: pointer;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
 }
 
 #decline {
