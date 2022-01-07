@@ -11,9 +11,9 @@ def home():
 def admin():
   return render_template("admin.html")
 
-@app.route('/izvele')
+@app.route('/about_us')
 def izvele():
-  return render_template("Klienta_lapa_izvl.html")
+  return render_template("templates/about_us.html")
 
 @app.route('/register')
 def register():
