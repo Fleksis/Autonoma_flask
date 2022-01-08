@@ -4,13 +4,14 @@
 
 {% block content %}
 <div>
-    <form id="form" method="POST" action="/user_login">
-        <h3 class="h3Krasa">Pieslēgšanās lapa</h3>
-        <input type="text" name="firstname" placeholder="Vārds">
-        <input type="text" name="lastname" placeholder="Uzvārds">
-        <input type="email" name="email" placeholder="email">
-        <input type="text" name="password" placeholder="parole">
-        <button type="submit" id="PrecesPoga">Pieslēgties</button>
-    </form>
+    <div class="form-box">
+        <form method="POST" action="/user_login">
+            <h3 class="h3Krasa">Pieslēgšanās lapa</h3>
+            <input type="email" name="email" placeholder="email">
+            <input type="text" name="password" placeholder="parole">
+            <button type="submit" id="PrecesPoga">Pieslēgties</button>
+        </form>
+        <a href="/register"><button id="PrecesPoga">Reģistrācija</button></a>
+    </div>
 </div>
 {% endblock %}

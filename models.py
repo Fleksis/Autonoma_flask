@@ -22,9 +22,6 @@ db = SQLAlchemy(app, metadata=_metadata)
 # Migrate
 migrate = Migrate(app, db)
 
-
-
-
 class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
@@ -37,7 +34,7 @@ class User(db.Model):
     car = db.relationship("Car", cascade="all, delete")
 
     def __repr__(self):
-        return '<User %r %r>' % (self.firstname)
+        return '<User %r>' % (self.firstname)
 
 class Car(db.Model):
     __tablename__ = 'car'

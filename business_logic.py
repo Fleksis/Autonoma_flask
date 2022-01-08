@@ -13,7 +13,6 @@ def save_car_booking(data):
 def get_car_booking():
     return Car.query.all()
 
-
 def save_user_registration(data):
     email_exist = (User.query.filter(User.email == data['email']).first() != None)
     if email_exist == False:
@@ -35,3 +34,13 @@ def save_user_registration(data):
         raise Exception('Paroles nesakrīt un E-pasts ir aizņemts!')
     else:
         raise Exception('E-pasts ir aizņemts!')
+
+def compare_user_login(data):
+    user = User.query.filter(User.email == data['email']).first() # Iegūstam lietotāju kuram ir ievadītais e-pasts
+    if user != None and user.password == data['password']:
+        print(user)
+        print("Logged")
+        return user
+    else:
+        print("Nepareizs epasts vai parole!")
+    return True
