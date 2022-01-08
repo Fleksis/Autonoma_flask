@@ -49,6 +49,7 @@ def new_user_register():
 @app.route('/user_login', methods=['POST'])
 def user_login():
   compare_user_login(request.form)
+  #safixot rindu zemāk, jo vajaga lai viņš apstrādā vai tika iedots logged vai nepareizs.
   return redirect(url_for('profile'))
 
 

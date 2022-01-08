@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html lang="lv">
-<head>
-  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <meta content="utf-8" http-equiv="encoding">
+{% extends "index.html" %}
 
-    <title>Karliku AutoNoma</title>
-    <link rel="Icon" href="/static/img/logo_mazais.png">
-</head>
-<body>
-<style>
-  body {
-  background-image: url("/static/img/adminlapa.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: lightgray;
-  }
-</style>
-<link rel="stylesheet" href="/static/css/izvelne.css">
+{% block title %}Admin lapa{% endblock %}
 
-<div class="adminPos">
-  <a href="/" class="adminPoga">---></a>
-</div>
-
+{% block content %}
 <div id="biblioteka">
-
+  {% for car in cars %}
+    <div class="jaunsLogs">
+      <h4> ID:</h4>
+      <h4>Vārds:</h4>
+      <h4>Uzvārds:</h4>
+      <h4>Dzīves vieta:</h4>
+      <h4>Telefona numurs:</h4>
+      <h4>Automobīļa marka:</h4>
+      <h4>Nomas datums no:</h4>
+      <h4>Nomas datums līdz:</h4>
+      <button>Aptiprināt</button>
+      <button>Neapstiprināt</button>
+      <h5>Noma apstiprināta!</h5>
+      <h5>Noma noraidīta!</h5>
+    </div>
+  {% endfor %}
 </div>
-
-<script src="/static/js/autoNoma.js"></script>
-
-</body>
-</html>
+{% endblock %}
