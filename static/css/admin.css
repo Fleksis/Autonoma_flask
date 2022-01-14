@@ -1,46 +1,75 @@
-.adminPos {
-    position: absolute;
-    margin-left: 1800px;
+body {
+  background-image: url("/static/img/adminlapa.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: lightgray;
 }
 
-
-.adminPoga {
-    display: inline-block;
-    text-align: center;
-    width: 100px;
-    height: 25px;
-    font-size: 20px;
-    font-family: sans-serif;
-    background: #CCCCCC;
-}
-
-.adminPoga:visited {
-    color: black;
+a {
     text-decoration: none;
 }
 
-.adminPoga:link {
-    text-decoration: none;
-    color: black;
+a:hover {
+    color: gray;
 }
 
-#poga {
+a:active {
+    color: grey
+}
+
+.navigation-bar {
     display: flex;
     justify-content: center;
+    gap: 1%;
     align-items: center;
+    margin-top: 13%;
 }
 
-#jaunaNoma {
-    background-color: whitesmoke;
-    font-size: 25px;
-    font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
+.navigation-bar > a {
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0.2%;
     color: black;
-    font-weight: 700;
-    border: solid 4px grey;
-    width: 281px;
-    height: 50px;
-    border-radius: 1000px;
-    cursor: pointer;
+    padding: 0.4%;
+}
+
+.form-box {
+    background-image: url("../img/lodzinjaFons.png");
+    background-size: cover;
+    margin: auto;
+    padding: 20px;
+    border: solid 3px whitesmoke;
+    border-radius: 15px;
+    width: 240px;
+    margin-top: 1%;
+}
+
+form > input, form > select{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-size: 17px;
+    text-align: center;
+    border: 2px solid white;
+    background-color: white;
+    outline: none;
+    width: 190px;
+    margin-bottom: 15px;
+}
+
+form > input:active, form > select:active {
+    background: whitesmoke;
+    border: 2px solid grey;
+}
+
+.h3Krasa {
+    font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
+    color: white;
+    margin-top: -10px;
+    margin-left: 30px;
 }
 
 h3 {
@@ -48,97 +77,6 @@ h3 {
     margin-left: 20px;
     font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
     color: purple;
-}
-
-#vards {
-    margin-left: 35px;
-    border-radius: 10px;
-    font-size: 17px;
-    text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
-}
-
-#uzvards {
-    margin-top: 15px;
-    margin-left: 35px;
-    border-radius: 10px;
-    font-size: 17px;
-    text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
-}
-
-#dzivesVieta {
-    margin-top: 15px;
-    margin-left: 35px;
-    border-radius: 10px;
-    font-size: 17px;
-    text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
-}
-
-#numurs {
-    margin-top: 15px;
-    margin-left: 35px;
-    border-radius: 10px;
-    font-size: 17px;
-    text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
-}
-
-#budzets {
-    margin-top: 15px;
-    margin-left: 35px;
-    border-radius: 10px;
-    font-size: 17px;
-    text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
-}
-
-#marka {
-    margin-top: 15px;
-    margin-left: 35px;
-    border-radius: 10px;
-    font-size: 17px;
-    text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
-}
-
-#datums {
-    margin-top: 15px;
-    margin-left: 35px;
-    border-radius: 10px;
-    font-size: 17px;
-    text-align: center;
-    background-color: lightgrey;
-    border: solid 1px grey;
-}
-
-#PrecesPoga {
-    margin-left: 25px;
-    margin-top: 30px;
-    color: purple;
-    border: 3px solid black;
-    font-size: 25px;
-    background: whitesmoke;
-    width: 200px;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-#PrecesPoga:active {
-    color:purple;
-    background: black;
-    border: 3px solid whitesmoke;
-}
-
-#lodzinjs {
-    display: none;
 }
 
 #form {
@@ -171,15 +109,40 @@ h3 {
     padding: 5px;
 }
 
-#apst {
-    display: none;
-}
-
-#neapst {
-    display: none;
-}
-
 h4 {
-    color: purple;
-    overflow-wrap: break-word;
+    color: gray;
+}
+
+.admin-library {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+}
+
+#biblioteka {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 2px 2px 10px 2px black;
+    border-radius: 10px;
+    margin-bottom: 2%;
+} 
+
+#biblioteka > h1 {
+    text-shadow: 2px 2px 10px black;
+}
+
+#processing {
+    color: rgb(255, 123, 0);
+}
+
+#accepted {
+    color: lime;
+}
+
+#declined {
+    color: rgb(197, 50, 50);
 }

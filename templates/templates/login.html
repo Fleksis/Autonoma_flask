@@ -8,10 +8,17 @@
         <form method="POST" action="/user_login">
             <h3 class="h3Krasa">Pieslēgšanās lapa</h3>
             <input type="email" name="email" placeholder="email">
-            <input type="password" name="password" placeholder="parole">
+            <input type="password" name="password" placeholder="parole" autocomplete="off" required>
             <button type="submit" id="PrecesPoga">Pieslēgties</button>
         </form>
         <a href="/register"><button id="PrecesPoga">Reģistrācija</button></a>
+         {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h4 class="error">{{ message }}</h4>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
     </div>
 </div>
 {% endblock %}

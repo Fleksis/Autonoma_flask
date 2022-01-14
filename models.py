@@ -31,13 +31,14 @@ class User(db.Model):
     password = db.Column(db.String(40), nullable=False)
     address = db.Column(db.String(40), nullable=False)
     mobile_number = db.Column(db.String(20), nullable=False)
-    car = db.relationship("Car", cascade="all, delete")
+    role = db.Column(db.String(5), nullable=False)
+    car = db.relationship("UserCar", cascade="all, delete")
 
     def __repr__(self):
         return '<User %r>' % (self.firstname)
 
-class Car(db.Model):
-    __tablename__ = 'car'
+class UserCar(db.Model):
+    __tablename__ = 'user_car'
     id = db.Column(db.Integer, primary_key=True)
     car = db.Column(db.String(20), nullable=False)
     from_date = db.Column(db.String(20), nullable=False)
@@ -47,3 +48,13 @@ class Car(db.Model):
 
     def __repr__(self):
         return '<BookedCars %r %r>' % (self.car , self.id)
+
+class Car(db.Model):
+    __tablename__ = 'car'
+    id = db.Column(db.Integer, primary_key=True)
+    manufacture = db.Column(db.String(20), primary_key=False)
+    model = db.Column(db.String(20), primary_key=False)
+    stock = db.Column(db.Integer, primary_key=False)
+
+    def __repr__(self):
+        return '<Car %r %r>' % (self.manufacture , self.id)

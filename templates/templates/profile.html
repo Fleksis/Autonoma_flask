@@ -4,7 +4,11 @@
 
 {% block content %}
 <div class="navigation-bar">
-    <a href="/about_us">Par Mums!</a>
+    <a href="/about_us">Par Mums</a>
+      {% if user.role == "admin" %}
+        <a href="/admin">Vadības panelis</a>
+      {% endif %}
+    <a href="/logout">Iziet</a>
   </div>
 
   <p class="nomasText">Nomā mašīnu jau tagad!</p>
@@ -16,12 +20,12 @@
   <div id="lodzinjs" class="form-box">
     <form class="form" id="form" method="POST" action="/add_car">
       <h3 class="h3Krasa">Nomāt automašīnu!</h3>
-      <h4 name="id">ID</h4>
-      <h4 name="firstname">Vārds </h4>
-      <h4 name="lastname">Uzvārds </h4>
-      <h4 name="email">E-pasts </h4>
-      <h4 name="address">Dzīves vieta </h4>
-      <h4 name="mobile_number">Telefona numurs </h4>
+      <h4 name="id">ID {{user.id}}</h4>
+      <h4 name="firstname">Vārds {{user.firstname}}</h4>
+      <h4 name="lastname">Uzvārds {{user.lastname}}</h4>
+      <h4 name="email">E-pasts {{user.email}}</h4>
+      <h4 name="address">Dzīves vieta {{user.address}}</h4>
+      <h4 name="mobile_number">Telefona numurs {{user.mobile_number}}</h4>
       <select name="car" id="marka">
         <option value="Audi" disabled>**Audi**</option>
         <option value="Audi a8">Audi A8</option>
@@ -56,7 +60,7 @@
       </select>
       <div class="date-box">
         <div>
-          <label for="from_date">No:</label><input id="from_date" type="date" id="no" name="from_date">
+          <label for="from_date">No:</label><input id="from_date" type="date" id="no" name="from_date" value="{{ date }}">
         </div>
         <div>
           <label for="to_date">Līdz:</label><input id="to_date" type="date" id="lidz" name="to_date">
@@ -65,22 +69,27 @@
       <button onclick="alerts()" type="submit" id="PrecesPoga">Pievienot</button>
     </form>
   </div>
-
+`
   <div id="biblioteka">
     {% for car in cars %}
       <div class="jaunsLogs">
         <h4> ID: {{ car.id }}</h4>
-        <h4>Vārds: {{ car.firstname }}</h4>
-        <h4>Uzvārds: {{ car.lastname }}</h4>
-        <h4>Dzīves vieta: {{ car.address }}</h4>
-        <h4>Telefona numurs: {{ car.mobile_number }}</h4>
+        <h4>Vārds: {{ user.firstname }}</h4>
+        <h4>Uzvārds: {{ user.lastname }}</h4>
+        <h4>Dzīves vieta: {{ user.address }}</h4>
+        <h4>Telefona numurs: {{ user.mobile_number }}</h4>
         <h4>Automobīļa marka: {{ car.car }}</h4>
         <h4>Nomas datums no: {{ car.from_date }}</h4>
         <h4>Nomas datums līdz: {{ car.to_date }}</h4>
-        <!-- <button>Aptiprināt</button>
-        <button>Neapstiprināt</button>
-        <h5>Noma apstiprināta!</h5>
-        <h5>Noma noraidīta!</h5> -->
+        {% if car.booked_status == 0 %}
+          <h5>Automašīnas nomas pieprasijums tiek apstrādāts!</h5>
+        {% elif car.booked_status == 1 %}
+          <h5>Noma apstiprināta!</h5>
+        {% elif car.booked_status == 2 %}}
+          <h5>Noma noraidīta!</h5>
+        {% else %}
+          <h5>Notikusi ļoti aizdomīga kļūa!</h5>
+        {% endif %}
       </div>
     {% endfor %}
   </div>

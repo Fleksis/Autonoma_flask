@@ -1,24 +1,63 @@
-{% extends "index.html" %}
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
 
-{% block title %}Admin lapa{% endblock %}
-
+    <title>Karliku AutoNoma</title>
+    <link rel="Icon" href="/static/img/logo_mazais.png">
+</head>
+<body>
+<link rel="stylesheet" href="/static/css/admin.css">
 {% block content %}
-<div id="biblioteka">
-  {% for car in cars %}
-    <div class="jaunsLogs">
-      <h4> ID:</h4>
-      <h4>Vārds:</h4>
-      <h4>Uzvārds:</h4>
-      <h4>Dzīves vieta:</h4>
-      <h4>Telefona numurs:</h4>
-      <h4>Automobīļa marka:</h4>
-      <h4>Nomas datums no:</h4>
-      <h4>Nomas datums līdz:</h4>
-      <button>Aptiprināt</button>
-      <button>Neapstiprināt</button>
-      <h5>Noma apstiprināta!</h5>
-      <h5>Noma noraidīta!</h5>
+<div class="navigation-bar">
+  <a href="/profile">Profils</a>
+  <a href="/admin/car_manager">Automobīļa pārvalde</a>
+  <a href="/logout">Iziet</a>
+</div>
+
+<div id="lodzinjs" class="form-box">
+  <form class="form" method="POST" action="/add_car">
+    <h3 class="h3Krasa">Pievienot automašīnu nomai!</h3>
+    <input type="text" name="manufacture" placeholder="Automobīļa marka">
+    <input type="text" name="model" placeholder="Automobīļa modelis" autocomplete="off" required>
+    <button onclick="alerts()" type="submit" id="PrecesPoga">Pievienot</button>
+  </form>
+</div>
+
+<div class="admin-library">
+    {% for index in range(3) %}
+    {% if index == 0 %}
+      <h1 id="processing">Apstrāde</h1> 
+    {% elif index == 1 %}
+      <h1 id="accepted">Apstiprinātās nomas</h1>
+    {% elif index == 2 %}
+      <h1 id="declined">Noraidītās nomas</h1>
+    {% endif %}
+    <div id="biblioteka">
+      {% for user_car in user_cars %}
+          {% if user_car[0].booked_status == index %}
+            <div class="jaunsLogs">
+              <h4> ID: {{ user_car[0].id }}</h4>
+              <h4> Lietotāja ID: {{ user_car[1].id }}</h4>
+              <h4>Vārds: {{ user_car[1].firstname }}</h4>
+              <h4>Uzvārds: {{ user_car[1].lastname }}</h4>
+              <h4>Dzīves vieta: {{ user_car[1].address }}</h4>
+              <h4>Telefona numurs: {{ user_car[1].mobile_number }}</h4>
+              <h4>Automobīļa marka: {{ user_car[0].car }}</h4> 
+              <h4>Nomas datums no: {{ user_car[0].from_date }}</h4>
+              <h4>Nomas datums līdz: {{ user_car[0].to_date }}</h4>
+              <a href="/admin/set_booking_status/{{ user_car[0].id }}/1"><button>Aptiprināt</button></a>
+              <a href="/admin/set_booking_status/{{ user_car[0].id }}/2"><button>Neapstiprināt</button></a>
+            </div>
+          {% endif %}
+      {% endfor %}
     </div>
   {% endfor %}
 </div>
+
+<script src="{{ url_for ('static', filename = 'js/admin_main.js') }}"></script>
 {% endblock %}
+
+</body>
+</html>

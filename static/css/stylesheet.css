@@ -255,6 +255,7 @@ option {
 
 .error {
     font-weight: bold;
+    text-align: center;
     color: red;
 }
 
@@ -277,27 +278,6 @@ option {
     margin-left: 30px;
 }
 
-.alert {
-    padding: 20px;
-    background-color: #f44336;
-    color: white;
-}
-
-.closebtn {
-    margin-left: 15px;
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-  
-.closebtn:hover {
-    color: black;
-}
-
 #biblioteka {
     display: flex;
     flex-direction: row;
@@ -313,22 +293,6 @@ option {
     align-items: center;
     border: 3px solid black;
     border-radius: 5px;
-}
-
-#apst {
-    display: none;
-}
-
-#neapst {
-    display: none;
-}
-
-.poga1 {
-    display: none;
-}
-
-.poga2 {
-    display: none;
 }
 
 h4 {

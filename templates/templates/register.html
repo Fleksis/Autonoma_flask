@@ -7,13 +7,13 @@
     <div class="form-box">
         <form id="form" method="POST" action="/new_user_register">
             <h3 class="h3Krasa">Reģistrācijas lapa</h3>
-            <input type="text" name="firstname" placeholder="Vārds">
-            <input type="text" name="lastname" placeholder="Uzvārds">
+            <input type="text" name="firstname" placeholder="Vārds" autocomplete="off" required>
+            <input type="text" name="lastname" placeholder="Uzvārds" autocomplete="off" required>
             <input type="email" name="email" placeholder="email">
-            <input type="password" name="password" placeholder="parole">
-            <input type="password" name="password_confirm" placeholder="atkārtojiet paroli">
-            <input type="text" name="address" placeholder="Dzīves vieta">
-            <input type="text" name="mobile_number" placeholder="+371 telefona numurs">
+            <input type="password" name="password" placeholder="parole" autocomplete="off" required>
+            <input type="password" name="password_confirm" placeholder="atkārtojiet paroli" autocomplete="off" required>
+            <input type="text" name="address" placeholder="Dzīves vieta" autocomplete="off" required>
+            <input type="text" name="mobile_number" placeholder="+371 telefona numurs" autocomplete="off" required>
             <button type="submit" id="PrecesPoga">Reģistrēties</button>
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
