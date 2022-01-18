@@ -69,7 +69,7 @@
       <button onclick="alerts()" type="submit" id="PrecesPoga">Pievienot</button>
     </form>
   </div>
-`
+
   <div id="biblioteka">
     {% for car in cars %}
       <div class="jaunsLogs">
@@ -85,11 +85,12 @@
           <h5>Automašīnas nomas pieprasijums tiek apstrādāts!</h5>
         {% elif car.booked_status == 1 %}
           <h5>Noma apstiprināta!</h5>
-        {% elif car.booked_status == 2 %}}
+        {% elif car.booked_status == 2 %}
           <h5>Noma noraidīta!</h5>
         {% else %}
           <h5>Notikusi ļoti aizdomīga kļūa!</h5>
         {% endif %}
+        <a href="/delete_car/{{ car.id }}"><button class="delete_car_button">Atcelt nomu</button></a>
       </div>
     {% endfor %}
   </div>

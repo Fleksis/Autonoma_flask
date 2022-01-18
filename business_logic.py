@@ -62,6 +62,7 @@ def get_all_users_cars():
 
 
 def is_user_admin(id):
+    '''returno True, ja lietotājs ir admins'''
     try:
         return True if get_user_data(id).role == "admin" else False
     except Exception as e:
@@ -87,3 +88,14 @@ def set_car_stock(data):
         model=data['model'],
         stock=data['stock']
     )
+
+
+def remove_car(id):
+    try:
+        car_id = UserCar.query.filter(UserCar.id == id).first()
+        print(car_id.id)
+        db.session.delete(car_id)
+        db.session.commit()
+        return True
+    except:
+        raise Exception("Notika kļūda!")

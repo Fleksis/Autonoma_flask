@@ -2,7 +2,7 @@ body {
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover, contain;
     background-color: lightgray;
 }
 

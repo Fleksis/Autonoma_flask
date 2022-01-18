@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session
 from flask.helpers import url_for, flash
 from settings import app
 from models import Car
-from business_logic import set_status_code, is_user_logged, save_car_booking, get_user_car_booking, save_user_registration, compare_user_login, get_user_data, get_all_users_cars, is_user_admin
+from business_logic import set_status_code, is_user_logged, save_car_booking, get_user_car_booking, save_user_registration, compare_user_login, get_user_data, get_all_users_cars, is_user_admin, remove_car
 from datetime import date
 
 @app.route('/')
@@ -47,7 +47,6 @@ def login():
 def profile():
   try:
     if is_user_logged():
-      print(date.today().strftime("%d/%m/%Y"))
       return render_template("templates/profile.html", cars = get_user_car_booking(session['user']), user = get_user_data(session['user']), date = date.today().strftime("%Y-%m-%d"))
     else:
       return redirect(url_for('home'))
@@ -62,6 +61,17 @@ def add_car():
     return redirect(url_for('profile'))
   else:
     return "404"
+
+@app.route('/delete_car/<id>')
+def delete_car(id):
+  try:
+    remove_car(id)
+  except Exception as e:
+    flash(str(e))
+  if is_user_admin(session['user']):
+    return redirect(url_for('admin'))
+  else:
+    return redirect(url_for('profile'))
 
 @app.route('/new_user_register', methods=['POST'])
 def new_user_register():

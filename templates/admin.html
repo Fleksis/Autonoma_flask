@@ -16,14 +16,14 @@
   <a href="/logout">Iziet</a>
 </div>
 
-<div id="lodzinjs" class="form-box">
+<!-- <div id="lodzinjs" class="form-box">
   <form class="form" method="POST" action="/add_car">
     <h3 class="h3Krasa">Pievienot automašīnu nomai!</h3>
     <input type="text" name="manufacture" placeholder="Automobīļa marka">
     <input type="text" name="model" placeholder="Automobīļa modelis" autocomplete="off" required>
     <button onclick="alerts()" type="submit" id="PrecesPoga">Pievienot</button>
   </form>
-</div>
+</div> -->
 
 <div class="admin-library">
     {% for index in range(3) %}
@@ -49,6 +49,7 @@
               <h4>Nomas datums līdz: {{ user_car[0].to_date }}</h4>
               <a href="/admin/set_booking_status/{{ user_car[0].id }}/1"><button>Aptiprināt</button></a>
               <a href="/admin/set_booking_status/{{ user_car[0].id }}/2"><button>Neapstiprināt</button></a>
+              <a href="/delete_car/{{ user_car[0].id }}"><button class="delete_car_button">Atcelt nomu</button></a>
             </div>
           {% endif %}
       {% endfor %}
