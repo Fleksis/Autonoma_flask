@@ -161,7 +161,7 @@ a:active {
     position: absolute;
     left: 8px;
     color: rgb(255, 255, 255);
-    transition: 0.3s;
+    transition: 0.5s;
 
 }
 .form_input{
@@ -171,14 +171,11 @@ a:active {
     border-bottom: 1px solid #ffffff;
     background-color: transparent;
     outline: none;
-    transition: 0.3s;
+    transition: 0.5s;
 
 }
 .form_input:focus{
     border-bottom:  1px solid #1a73a8;
-    top: -18px;
-    transition: top 5s;
-
 }
 
 .form_input:focus ~ .form_label,
@@ -343,6 +340,7 @@ option {
     align-items: center;
     border: 3px solid black;
     border-radius: 5px;
+    padding: 1%;
 }
 
 h4 {
