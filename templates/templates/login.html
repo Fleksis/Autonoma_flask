@@ -6,9 +6,16 @@
 <div>
     <div class="form-box">
         <form method="POST" action="/user_login">
-            <h3 class="h3Krasa">Pieslēgšanās lapa</h3>
-            <input type="email" name="email" placeholder="email">
-            <input type="password" name="password" placeholder="parole" autocomplete="off" required>
+            <h3 class="h3Krasa">Pieslēgšanā</h3>
+            <div class="form_group">
+                <input class="form_input" type="email" name="email" placeholder=" ">
+                <label class="form_label">Email</label>
+            </div>
+
+            <div class="form_group">
+                <input class="form_input" type="password" name="password" placeholder=" " autocomplete="off" required>
+                <label class="form_label">Parole</label>
+            </div>
             <button type="submit" id="PrecesPoga">Pieslēgties</button>
         </form>
         <a href="/register"><button id="PrecesPoga">Reģistrācija</button></a>

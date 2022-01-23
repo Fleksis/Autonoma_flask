@@ -7,13 +7,34 @@
     <div class="form-box">
         <form id="form" method="POST" action="/new_user_register">
             <h3 class="h3Krasa">Reģistrācijas lapa</h3>
-            <input type="text" name="firstname" placeholder="Vārds" autocomplete="off" required>
-            <input type="text" name="lastname" placeholder="Uzvārds" autocomplete="off" required>
-            <input type="email" name="email" placeholder="email">
-            <input type="password" name="password" placeholder="parole" autocomplete="off" required>
-            <input type="password" name="password_confirm" placeholder="atkārtojiet paroli" autocomplete="off" required>
-            <input type="text" name="address" placeholder="Dzīves vieta" autocomplete="off" required>
-            <input type="text" name="mobile_number" placeholder="+371 telefona numurs" autocomplete="off" required>
+            <div class="form_group">
+                <input class="form_input" type="text" name="firstname" placeholder=" " autocomplete="off" required>
+                <label class="form_label">Vārds</label>
+            </div>
+            <div class="form_group">
+                <input class="form_input" type="text" name="lastname" placeholder=" " autocomplete="off" required>
+                <label class="form_label">Uzvārds</label>
+            </div>
+            <div class="form_group">
+                <input class="form_input" type="email" name="email" placeholder=" ">
+                <label class="form_label">email</label>
+            </div>
+            <div class="form_group">
+                <input class="form_input" type="password" name="password" placeholder=" " autocomplete="off" required>
+                <label class="form_label">parole</label>
+            </div>
+            <div class="form_group">
+                <input class="form_input"type="password" name="password_confirm" placeholder=" " autocomplete="off" required>
+                <label class="form_label">atkārtojiet paroli</label>
+            </div>
+            <div class="form_group">
+                <input class="form_input" type="text" name="address" placeholder=" " autocomplete="off" required>
+                <label class="form_label">Dzīves vieta</label>
+            </div>
+            <div class="form_group">
+                <input class="form_input" type="text" name="mobile_number" placeholder=" " autocomplete="off" required>
+                <label class="form_label">+371 telefona numurs</label>
+            </div>
             <button type="submit" id="PrecesPoga">Reģistrēties</button>
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
