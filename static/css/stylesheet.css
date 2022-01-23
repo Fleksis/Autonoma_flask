@@ -142,11 +142,51 @@ a:active {
     background-image: url("../img/lodzinjaFons.jpg");
     background-size: cover;
     margin: auto;
-    padding: 20px;
-    border: solid 3px whitesmoke;
-    border-radius: 15px;
-    width: 240px;
-    margin-top: 1%;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgb(47, 47, 47);
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.7px;
+    width: 300px;
+    margin-top: 6%;
+    opacity: 0.9;
+}
+.form_group{
+    position: relative;
+    margin-bottom: 32px;
+    color: white;
+}
+.form_label{
+    position: absolute;
+    left: 8px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+
+}
+.form_input{
+    width: 100%;
+    padding: 0 0 10px 0;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s;
+
+}
+.form_input:focus{
+    border-bottom:  1px solid #1a73a8;
+    top: -18px;
+    transition: top 5s;
+
+}
+
+.form_input:focus ~ .form_label,
+.form_input:not(:placeholder-shown)~ .form_label{
+    top: -18px;
+    font-size: 12px;
+    color: #525252 ;
+
 }
 
 form > input, form > select{
@@ -240,17 +280,23 @@ option {
 
 
 #PrecesPoga {
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    color: black;
-    border: 3px solid black;
-    font-size: 25px;
-    background: white;
-    width: 200px;
-    border-radius: 15px;
-    margin-left: 25px;
-    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    background-color: rgb(98, 98, 98);
+    outline: none;
+    border-radius: 5px;
+    margin-left: 7px;
+    margin-top: 25px;
     cursor: pointer;
+    transition: 0.3s;
+
+    
+}
+#PrecesPoga:focus,
+#PrecesPoga:hover{
+    background-color: rgb(143, 143, 143);
 }
 
 .error {
@@ -273,10 +319,14 @@ option {
 
 .h3Krasa {
     font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
+    text-align: center;
+    margin: 0 0 32px 0;
+    font-weight: normal;
     color: white;
-    margin-top: -10px;
-    margin-left: 30px;
+
 }
+
+
 
 #biblioteka {
     display: flex;
