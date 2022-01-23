@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session
 from flask.helpers import url_for, flash
 from settings import app
 from models import Car
-from business_logic import set_status_code, is_user_logged, save_car_booking, get_user_car_booking, save_user_registration, compare_user_login, get_user_data, get_all_users_cars, is_user_admin, remove_car
+from business_logic import *
 from datetime import date
 
 @app.route('/')
