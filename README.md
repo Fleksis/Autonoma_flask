@@ -15,5 +15,5 @@
 * **Visu lietoāju nomātās mašīnas un profili glabājas SQLite datu bāzē caur Flask**
 
 ## Ko katrs no mums taisija
-Markuss Mišins - Nodarbojās vairak ar backend pusi (python - flask, SQLite, database)
+Markuss Mišins - Nodarbojās vairak ar backend pusi (python - flask, SQLite, database)\
 Dmitrijs Semjonovs un Ivans Sadovnikovs - nodarbojās ar frontend (html, css, stilistika un figma)
