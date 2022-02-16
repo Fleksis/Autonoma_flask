@@ -7,7 +7,7 @@
 
     <title>{% block title %}Karliku AutoNoma{% endblock %}</title>
     <link rel="Icon" href="/static/img/logo_mazais.png">
-    <link rel="stylesheet" href="/static/css/stylesheet.css">
+    <link rel="stylesheet" href="../static/css/stylesheet.css">
 </head>
 
 <body>
@@ -30,6 +30,32 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
+
+        <div id="poga">
+            <button id=jaunaNoma>Nomāt Automašīnu</button>
+        </div>
+
+        <div id="lodzinjs" class="form-box">
+            <form class="form" id="form" method="POST" action="/add_car_reservantion">
+                <h3 class="h3Krasa">Meklēt automašīnu!</h3>
+                <select onchange="filter_cars()" id="rental_point" name="rental_point">
+                    <option value="-1">Izvēlieties nomas punktu</option>
+                </select>
+                <select onchange="filter_rental_points()" id="cars" name="car">
+                    <option  value="-1">Izvēlieties automašīnu</option>
+                </select>
+                <div class="date-box">
+                    <div>
+                        <label for="from_date">No:</label><input id="from_date" type="date" name="from_date" value="{{ date }}">
+                    </div>
+                    <div>
+                        <label for="to_date">Līdz:</label><input id="to_date" type="date" name="to_date">
+                    </div>
+                </div>
+                <button onclick="alerts()" type="submit" id="PrecesPoga">Meklēt</button>
+            </form>
+        </div>
+        <script src="/static/js/autoNoma.js"></script>
     {% endblock %}
 </body>
 
