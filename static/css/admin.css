@@ -82,6 +82,57 @@ form > input:active, form > select:active {
     border: 2px solid grey;
 }
 
+.date-box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.date-box > div {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    align-items: center;
+    width: 190px;
+    color: white;
+    font-size: 20px;
+    height:30px;
+}
+
+.date-box > div > input {
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    border: 2px solid white;
+    background-color: white;
+    outline: none;
+}
+
+#no {
+    margin-top: -15px;
+    margin-left: 66px;
+    border-radius: 10px;
+    /* font-size: 17px;
+    font-weight: 600; */
+    text-align: center;
+    border: 3px solid white;
+    background-color: white;
+}
+
+#lidz {
+    margin-top: -15px;
+    margin-left: 66px;
+    border-radius: 10px;
+    /* font-size: 17px;
+    font-weight: 600; */
+    text-align: center;
+    border: 3px solid white;
+    background-color: white;
+}
+
 .h3Krasa {
     font-family: "微软雅黑", "Microsoft YaHei", "Neuropolitical", sans-serif;
     color: white;

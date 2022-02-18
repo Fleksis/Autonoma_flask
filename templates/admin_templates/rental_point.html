@@ -45,6 +45,20 @@
             <input type="text" name="year" placeholder="Izlaišanas gads" autocomplete="off" required>
             <input type="text" name="number_plate" placeholder="numura zīme" autocomplete="off" required>
             <input type="text" name="hourly_rate" placeholder="stundas likme" autocomplete="off" required>
+            <div class="date-box">
+                <div>
+                    <label for="from_date">No:</label><input id="from_date" type="date" name="from_date" value="{{ date }}">
+                </div>
+                <div>
+                    <input id="no" type="time" value="00:00" required>
+                </div>
+                <div>
+                    <label for="to_date">Līdz:</label><input id="to_date" type="date" name="to_date">
+                </div>
+                <div>
+                    <input id="lidz" type="time" value="00:00" required>
+                </div>
+            </div>
             <button type="submit" id="PrecesPoga">Pievienot</button>
         </form>
     </div>
