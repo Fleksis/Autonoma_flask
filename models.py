@@ -65,6 +65,8 @@ class Car(db.Model):
     year = db.Column(db.Integer, nullable=False)
     number_plate = db.Column(db.String(10), nullable=False)
     hourly_rate = db.Column(db.Integer, nullable=False)
+    from_date = db.Column(db.String(20), nullable=False)
+    to_date = db.Column(db.String(20), nullable=False)
     reservation = db.relationship("UserCar", cascade="all, delete")
     rental_point_id = db.Column(db.Integer, db.ForeignKey("rental_point.id"))
 
@@ -79,6 +81,8 @@ class Car(db.Model):
                 "year": self.year,
                 "number_plate": self.number_plate,
                 "hourly_rate": self.hourly_rate,
+                "from_date": self.from_date,
+                "to_date": self.to_date,
                 "rental_point_id": self.rental_point_id
                 }
 
