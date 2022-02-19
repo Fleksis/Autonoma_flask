@@ -4,13 +4,28 @@
 
 {% block content %}
 <div>
-    <form id="form" method="POST" action="/user_login">
-        <h3 class="h3Krasa">Pieslēgšanās lapa</h3>
-        <input type="text" name="firstname" placeholder="Vārds">
-        <input type="text" name="lastname" placeholder="Uzvārds">
-        <input type="email" name="email" placeholder="email">
-        <input type="text" name="password" placeholder="parole">
-        <button type="submit" id="PrecesPoga">Pieslēgties</button>
-    </form>
+    <div class="form-box">
+        <form method="POST" action="/user_login">
+            <h3 class="h3Krasa">Pieslēgšanā</h3>
+            <div class="form_group">
+                <input class="form_input" type="email" name="email" placeholder=" ">
+                <label class="form_label">Email</label>
+            </div>
+
+            <div class="form_group">
+                <input class="form_input" type="password" name="password" placeholder=" " autocomplete="off" required>
+                <label class="form_label">Parole</label>
+            </div>
+            <button type="submit" id="PrecesPoga">Pieslēgties</button>
+        </form>
+        <a href="/register"><button id="PrecesPoga">Reģistrācija</button></a>
+         {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h4 class="error">{{ message }}</h4>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
 </div>
 {% endblock %}

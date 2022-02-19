@@ -1,42 +1,19 @@
 #  Autonoma
+## **Par projektu**
+* Projekta nosaukums - Karliku Autonoma
+* Projekta mērķis - Projekta mērķis ir, lai lietotājs var sev nomāt automašīnu, kādas ir pieejamas un sev piemērotāka laikā.
 ---
-**Dizains :**
+## **Projekta galvenās funckijas**
+* Login un Register
+* Nomāt auto tikai, kad esi reģistrējies
+* Kad lietotājs nomā auto, tad mājas lapas lietotājam kuram ir speciāls role **admin**, tad viņam parādās vadības paneļa poga profilā.
+* Vadības panelī parādas visu lietotāju nomātās mašīnas un sadalītas 3 grupās
+    * Apstrādāt
+    * Apstiprināti
+    * Apstiprināti
+* Apstiprināt, noraidīt vai dzēst automašīnas nomu lietotājam
+* **Visu lietoāju nomātās mašīnas un profili glabājas SQLite datu bāzē caur Flask**
 
-
-*  [figma](https://www.figma.com/file/SZYRR0Q6ZBT7IiGOWgdTPt/Untitled?node-id=0%3A1)
-
-
----
-
-**Grupā ir strādājuši sekojuši grupas DP1-3 audzēkņi :**
-
-* Markuss Mišins 
-
- * Dmitrijs Semjonovs
-
- * Ivans Sadovnikovs
-
----   
-
-**Ka mēs strādājam :**
-
-: No paša sākuma mēs kā visi  sākam veidot saitā dizainē , bet pēc pirmās stundas es ( Dmitrijs Semjonovs ) visu pārveidoju , jo pagājušās dizains , bija slikts . Un pilnībā es nodarbojos vairāk ar dizainu .
-Tālāk mēs sākam veidot pašu kodu , kamēr Markuss un Ivans veidoja galveno un admina lapu , es veidoju readme failu. Bet es tāpat palīdzēju ar dažādām lietām ...
-
----
-
-**Ka izskatās mūsu saite :** 
-
-* **Galvenā lapa :**
-
-![](1lapa.png)
-
-* **Admina lapa :**
-
-![](admin.png)
-
-* **Klienta lapa :**
-
-![](klienta.png)
-
-
+## Ko katrs no mums taisija
+Markuss Mišins - Nodarbojās vairak ar backend pusi (python - flask, SQLite, database)
+Dmitrijs Semjonovs un Ivans Sadovnikovs - nodarbojās ar frontend (html, css, stilistika un figma)
