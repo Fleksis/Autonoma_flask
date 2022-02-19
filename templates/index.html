@@ -2,35 +2,31 @@
 <html lang="lv">
 
 <head>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
 
-    <title>{% block title %}Karliku AutoNoma{% endblock %}</title>
-    <link rel="Icon" href="/static/img/logo_mazais.png">
-    <link rel="stylesheet" href="/static/css/stylesheet.css">
+  <title>{% block title %}Karliku AutoNoma{% endblock %}</title>
+  <link rel="Icon" href="/static/img/logo_mazais.png">
+  <link rel="stylesheet" href="/static/css/stylesheet.css">
 </head>
 
 <body>
 
-    <img class="logo" src="/static/img/lielaisLogo.png">
-    {% block content %}
-        <div class="navigation-bar">
-            <a href="/about_us">Par Mums!</a>
-            {% if session['user'] %}
-                <a href="/profile">Profils</a>
-            {% else %}
-                <a href="/login">Pieslēgties</a>
-            {% endif %}
-        </div>
-      
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <h4 class="error">{{ message }}</h4>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
-    {% endblock %}
+  <img class="logo" src="/static/img/lielaisLogo.png">
+  {% block content %}
+    <div class="navigation-bar">
+      <a href="/about_us">Par Mums!</a>
+      <a href="/login">Pieslēgties</a>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+             <h4 class="error">{{ message }}</h4>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  {% endblock %}
 </body>
 
 </html>

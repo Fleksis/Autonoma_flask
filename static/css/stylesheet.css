@@ -1,5 +1,5 @@
 body {
-    background-image: url(../img/background.png);
+    background-image: url("../img/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover, contain;
@@ -139,7 +139,7 @@ a:active {
 }
 
 .form-box {
-    background-image: url(../img/lodzinjaFons.jpg);
+    background-image: url("../img/lodzinjaFons.jpg");
     background-size: cover;
     margin: auto;
     padding: 32px;
@@ -242,27 +242,23 @@ option {
     outline: none;
 }
 
-.hourly-rate {
-    font-size: 20px;
-}
-
 #no {
-    margin-top: -15px;
-    margin-left: 66px;
+    margin-top: 15px;
+    margin-left: 70px;
     border-radius: 10px;
-    /* font-size: 17px;
-    font-weight: 600; */
+    font-size: 17px;
+    font-weight: 600;
     text-align: center;
     border: 3px solid white;
     background-color: white;
 }
 
 #lidz {
-    margin-top: -15px;
-    margin-left: 66px;
+    margin-top: 15px;
+    margin-left: 70px;
     border-radius: 10px;
-    /* font-size: 17px;
-    font-weight: 600; */
+    font-size: 17px;
+    font-weight: 600;
     text-align: center;
     border: 3px solid white;
     background-color: white;
@@ -327,21 +323,7 @@ option {
 
 }
 
-h5 {
-    font-size: 15px;
-}
 
-.nomas_apstrade {
-    color: rgb(233, 190, 0);
-}
-
-.noma_apstiprinata {
-    color: rgb(91, 139, 0);
-}
-
-.noma_noraidita {
-    color: rgb(230, 46, 0);
-}
 
 #biblioteka {
     display: flex;
@@ -351,7 +333,7 @@ h5 {
 
 .jaunsLogs {
     display: flex;
-    background-image: url(../img/fons.jpg);
+    background-image: url("../img/fons.jpg");
     margin-left: 15px;
     background-size: cover;
     flex-direction: column;
