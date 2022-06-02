@@ -14,13 +14,31 @@ convention = {
 
 _metadata = MetaData(naming_convention=convention)
 
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///AutoNomasDB.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+
 db = SQLAlchemy(app, metadata=_metadata)
 
 # Migrate
 migrate = Migrate(app, db)
+
+class RentalPoint(db.Model):
+    __tablename__ = 'rental_point'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(25), nullable=False)
+    city = db.Column(db.String(25), nullable=False)
+    address = db.Column(db.String(25), nullable=False)
+    car = db.relationship("Car", cascade="all, delete")
+
+    def __repr__(self):
+        return '<RentalPoint %r>' % (self.title)
+
+    def serialize(self):
+        return {"id": self.id,
+                "title": self.title,
+                "city": self.city,
+                "address": self.address
+                }
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -37,24 +55,43 @@ class User(db.Model):
     def __repr__(self):
         return '<User %r>' % (self.firstname)
 
-class UserCar(db.Model):
-    __tablename__ = 'user_car'
-    id = db.Column(db.Integer, primary_key=True)
-    car = db.Column(db.String(20), nullable=False)
-    from_date = db.Column(db.String(20), nullable=False)
-    to_date = db.Column(db.String(20), nullable=False)
-    booked_status = db.Column(db.Integer, default=0)
-    owner_id = db.Column(db.Integer, db.ForeignKey("user.id"))
-
-    def __repr__(self):
-        return '<BookedCars %r %r>' % (self.car , self.id)
 
 class Car(db.Model):
     __tablename__ = 'car'
     id = db.Column(db.Integer, primary_key=True)
-    manufacture = db.Column(db.String(20), primary_key=False)
-    model = db.Column(db.String(20), primary_key=False)
-    stock = db.Column(db.Integer, primary_key=False)
+    manufacture = db.Column(db.String(20), nullable=False)
+    model = db.Column(db.String(20), nullable=False)
+    classifications = db.Column(db.String(15), nullable=False)
+    year = db.Column(db.Integer, nullable=False)
+    number_plate = db.Column(db.String(10), nullable=False)
+    hourly_rate = db.Column(db.Integer, nullable=False)
+    reservation = db.relationship("UserCar", cascade="all, delete")
+    rental_point_id = db.Column(db.Integer, db.ForeignKey("rental_point.id"))
 
     def __repr__(self):
         return '<Car %r %r>' % (self.manufacture , self.id)
+
+    def serialize(self):
+        return {"id": self.id,
+                "manufacture": self.manufacture,
+                "model": self.model,
+                "classifications": self.classifications,
+                "year": self.year,
+                "number_plate": self.number_plate,
+                "hourly_rate": self.hourly_rate,
+                "rental_point_id": self.rental_point_id
+                }
+
+class UserCar(db.Model):
+    __tablename__ = 'user_car'
+    id = db.Column(db.Integer, primary_key=True)
+    from_date = db.Column(db.String(20), nullable=False)
+    to_date = db.Column(db.String(20), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+    reservation_number = db.Column(db.String(30))
+    booked_status = db.Column(db.Integer, default=0)
+    car_id = db.Column(db.Integer, db.ForeignKey("car.id"))
+    owner_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+
+    def __repr__(self):
+        return '<UserCar %r %r>' % (self.car, self.id)
